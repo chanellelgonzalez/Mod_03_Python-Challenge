@@ -49,15 +49,17 @@ print(rad_count)
 
 # # # Report 
 
-print("Election Results")
-print("___________________________________________")
-print (f"Total Votes: {total_votes}")
-print("___________________________________________")
-print (f"Charles Casper Stockham: {ccs_percent}% - {ccs_count} votes")
-print (f"Diana DeGette: {ddg_percent}% - {ddg_count} votes")
-print (f"Raymon Anthony Doane: {rad_percent}% - {rad_count} votes")
-print ("___________________________________________")
-print (f"Winner: {ddg_name}")
+with open('pypoll_textfile.txt', 'w') as f:
+    t1 = ("Election Results\n")
+    t2 = ("___________________________________________\n")
+    t3 =  (f"Total Votes: {total_votes}\n")
+    t4 = ("___________________________________________\n")
+    t5 = (f"Charles Casper Stockham: {ccs_percent}% - {ccs_count} votes\n")
+    t6 =  (f"Diana DeGette: {ddg_percent}% - {ddg_count} votes\n")
+    t7 = (f"Raymon Anthony Doane: {rad_percent}% - {rad_count} votes\n")
+    t8 = ("___________________________________________\n")
+    t9 = (f"Winner: {ddg_name}")
+    f.writelines([t1,t2,t3,t4,t5,t6,t7,t8,t9])
 
 # Election Results
 # -------------------------

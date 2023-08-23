@@ -38,15 +38,16 @@ total_change_avg = total_change / (total_mo - 1)
 
 # # Report 
 
-print("Financial Analysis")
-print("___________________________________________")
-print (f" Total Months: {total_mo}")
-print (f" Total Net Profit: ${total_net}")
-print (f" Average Change: ${total_change_avg}")
-print (f" Greatest Increase in Profit: {greatest_increase_date} ${greatest_increase}")
-print (f" Greatest Increase in Profit: {greatest_decrease_date} ${greatest_decrease}")
-
-
+with open('pybank_textfile.txt', 'w') as f:
+    t1 = ("Financial Analysis\n")
+    t2 = ("___________________________________________\n")
+    t3 = (f" Total Months: {total_mo}\n")
+    t4 = (f" Total Net Profit: ${total_net}\n")
+    t5 = (f" Average Change: ${total_change_avg}\n")
+    t6 = (f" Greatest Increase in Profit: {greatest_increase_date} ${greatest_increase}\n")
+    t7 = (f" Greatest Increase in Profit: {greatest_decrease_date} ${greatest_decrease}")
+    
+    f.writelines([t1,t2,t3,t4,t5,t6,t7])
 
 # SOLUTION
 # Financial Analysis
@@ -56,4 +57,4 @@ print (f" Greatest Increase in Profit: {greatest_decrease_date} ${greatest_decre
 # Average Change: $-8311.11
 # Greatest Increase in Profits: Aug-16 ($1862002)
 # Greatest Decrease in Profits: Feb-14 ($-1825558)
- 
+
